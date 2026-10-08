@@ -1,0 +1,809 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800;900&family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./styele.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  </head>
+  <body>
+    <header class="nav">
+      <div class="container nav__wrapper">
+        <a href="#top" class="nav__logo">Ezozbek<span class="dot">.</span></a>
+
+        <nav class="nav__lists" id="navLinks">
+          <a href="#about"><span class="num">01</span> Men haqimda</a>
+          <a href="#family"><span class="num">02</span> Oilam</a>
+          <a href="#group"><span class="num">03</span> Guruhim</a>
+          <a href="#projects"><span class="num">04</span> Loyihalar</a>
+          <a href="#contact"><span class="num">05</span> Aloqa</a>
+        </nav>
+
+        <button data-aos="fade-right"  class="burger" id="burgerBtn" aria-label="menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main  id="top">
+      <section class="hero">
+        <div class="hero__bg-text">DEVELOPER</div>
+        <div class="container hero__wrapper">
+          <div class="hero__copy">
+            <p class="hero__eyebrow">// PDP Junior &middot; Tashkent</p>
+            <h1 class="hero__title">
+              Salom, men<br />
+              <span class="hero__title-big">Ezozbek</span>
+            </h1>
+            <p class="hero__desc">
+              13 yoshli kelajak frontend dasturchisi. Sayt yasashni, futbolni va
+              g'oyalarni hayotga tatbiq etishni sevaman.
+            </p>
+            <div class="hero__cta">
+              <a href="#about" class="btn btn--primary">
+                Meni tanish <span class="arrow">→</span>
+              </a>
+              <a href="#projects" class="btn btn--ghost">Loyihalarim</a>
+            </div>
+          </div>
+
+          <div class="hero__visual">
+            <div data-aos="fade-right"  class="hero__frame">
+              <img data-aos="fade-right" 
+                class="hero__img"
+                src="./imagis/image copy 3.png"
+                alt="Ezozbek"
+              />
+            </div>
+            <div data-aos="flip-left"  class="hero__badge hero__badge--1">🎨 Rasim fan</div>
+            <div class="hero__badge hero__badge--2">3+ oy &middot; PDP</div>
+            <div class="hero__shape hero__shape--1"></div>
+            <div class="hero__shape hero__shape--2"></div>
+          </div>
+        </div>
+
+        <div class="marquee">
+          <div class="marquee__track">
+            <span
+              >FRONTEND &middot; HTML &middot; CSS &middot; JAVASCRIPT &middot;
+              KELAJAK DASTURCHI &middot;
+            </span>
+            <span
+              >FRONTEND &middot; HTML &middot; CSS &middot; JAVASCRIPT &middot;
+              KELAJAK DASTURCHI &middot;
+            </span>
+          </div>
+        </div>
+      </section>
+
+      <section class="about" id="about">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-num">01</span> Men haqimda
+          </h2>
+
+          <div class="about__grid">
+            <div data-aos="fade-right" class="about__photo">
+              <img src="./imagis/image copy 3.png" alt="Ezozbek" />
+              <div class="about__photo-tag">27.07.2013 yil tug'ilgan</div>
+            </div>
+
+            <div class="about__facts">
+              <p class="about__lead">
+                Salom! Ismim <strong>Ezozbek</strong>, 156-maktab 7-B sinf
+                o'quvchisiman. PDP Juniorda <strong>3 oydan beri</strong>
+                dasturlashni o'rganaman va kelajakda professional dasturchi
+                bo'lishni orzu qilaman.
+              </p>
+
+              <ul class="fact-list">
+                <li>
+                  <span data-aos="fade-right"  class="fact-icon">🎂</span>
+                  <div>
+                    <b data-aos="fade-right" ></b>Tug'ilgan sana</b>
+                    <p>27.07.2013</p>
+                  </div>
+                </li>
+                <li>
+                  <span data-aos="fade-right"  class="fact-icon">🏫</span>
+                  <div data-aos="fade-right" >
+                    <b>Maktab</b>
+                    <p>156-maktab, 7-B sinf</p>
+                  </div>
+                </li>
+                <li>
+                  <span data-aos="fade-right"  class="fact-icon">💻</span>
+                  <div data-aos="fade-right" >
+                    <b>Hozir o'rganyapman</b>
+                    <p>Sayt yasash — HTML, CSS, JS</p>
+                  </div>
+                </li>
+                <li>
+                  <span data-aos="fade-right"  class="fact-icon">🎨</span>
+                  <div data-aos="fade-right" >
+                    <b>Sevimli mashg'ulot</b>
+                    <p>Rasimchilik</p>
+                  </div>
+                </li>
+                <li>
+                  <span data-aos="fade-right"  class="fact-icon">💼</span>
+                  <div data-aos="fade-right" >
+                    <b>Orzu</b>
+                    <p>Kelajakda Biznesmen Bolish</p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="family" id="family">
+        <div class="container">
+          <h2 class="section-title">
+            <span class="section-num">02</span> Mening oilam
+          </h2>
+          <p class="section-sub">Men uchun eng aziz insonlar.</p>
+
+          <div data-aos="flip-left" class="family-slider" id="familySlider">
+            <div class="family-slides">
+              <div class="family-slide active">
+                <article class="fam-card">
+                  <div class="fam-card__img">
+                    <img src="./imagis/image copy 2.png" alt="Dadam" />
+                  </div>
+                  <div class="fam-card__info">
+                    <h3>Mahmud</h3>
+                    <span class="fam-role">Dadam &middot; 41 yosh</span>
+                    <p>Quruvchi bolib ishlaydi</p>
+                  </div>
+                </article>
+              </div>
+              <div class="family-slide">
+                <article class="fam-card fam-card--accent">
+                  <div class="fam-card__img">
+                    <img src="/imagis/image.png" alt="Oyim" />
+                  </div>
+                  <div class="fam-card__info">
+                    <h3>Setora</h3>
+                    <span class="fam-role">Oyim &middot; 33 yosh</span>
+                    <p>Doktr</p>
+                  </div>
+                </article>
+              </div>
+              <div class="family-slide">
+                <article class="fam-card">
+                  <div class="fam-card__img">
+                    <img src="./imagis/image copy.png" alt="Akam" />
+                  </div>
+                  <div class="fam-card__info">
+                    <h3>Ilyos</h3>
+                    <span class="fam-role">Akam&middot; 15 yosh</span>
+                    <p>Hali maktabka boradi</p>
+                  </div>
+                </article>
+              </div>
+              <div class="family-slide">
+                <article class="fam-card">
+                  <div class="fam-card__img">
+                    <img src="./imagis/image copy 5.png" alt="Ukam" />
+                  </div>
+                  <div class="fam-card__info">
+                    <h3>Kamron</h3>
+                    <span class="fam-role">Ukam&middot; 11 yosh</span>
+                    <p>Hali maktabka boradi</p>
+                  </div>
+                </article>
+              </div>
+              <div class="family-slide">
+                <article class="fam-card fam-card--accent">
+                  <div class="fam-card__img">
+                    <img src="./imagis/image copy 4.png" alt="Singlim" />
+                  </div>
+                  <div class="fam-card__info">
+                    <h3>Farzona</h3>
+                    <span class="fam-role">Singlim &middot; 7 yosh</span>
+                    <p>Endi maktabga chiqadi</p>
+                  </div>
+                </article>
+              </div>
+            </div>
+
+            <div class="family-controls">
+              <button
+                type="button"
+                class="family-arrow"
+                id="familyPrev"
+                aria-label="Oldingi oila a'zosi"
+              >
+                ←
+              </button>
+              <div class="family-dots" id="familyDots">
+                <button
+                  type="button"
+                  class="active"
+                  data-family-slide="0"
+                  aria-label="1-slayd"
+                ></button>
+                <button
+                  type="button"
+                  class=""
+                  data-family-slide="1"
+                  aria-label="2-slayd"
+                ></button>
+                <button
+                  type="button"
+                  class=""
+                  data-family-slide="2"
+                  aria-label="3-slayd"
+                ></button>
+                <button
+                  type="button"
+                  class=""
+                  data-family-slide="3"
+                  aria-label="4-slayd"
+                ></button>
+                <button
+                  type="button"
+                  class=""
+                  data-family-slide="4"
+                  aria-label="5-slayd"
+                ></button>
+              </div>
+              <button
+                type="button"
+                class="family-arrow"
+                id="familyNext"
+                aria-label="Keyingi oila a'zosi"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+ 
+ 
+<!-- ===================== 1) HTML ===================== -->
+<section class="group" id="group">
+  <div class="container">
+    <h2 class="section-title">
+      <span class="section-num">03</span> Mening guruhim
+    </h2>
+    <p class="section-sub">PDP Junior'dagi ajoyib guruhdoshlarim.</p>
+ 
+    <div class="gslider" id="gSlider">
+      <div class="gslider__track" id="gTrack">
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/IMG_20260926_092700.jpg" alt="Abduhamid" /></div>
+          <div class="gcard__info">
+            <h3>Abduhamid</h3>
+            <p>Ishni sekin qiladigan o'quvchi</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/IMG_20260926_092536.jpg" alt="Yusub" /></div>
+          <div class="gcard__info">
+            <h3>Muhammad Yusuf</h3>
+            <p>Tezroq qiladigan o'quvchilardan biri</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/image copy 6.png" alt="Shohina" /></div>
+          <div class="gcard__info">
+            <h3>Shohina</h3>
+            <p>Sinfimizning chaqqon o'quvchisi</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/IMG_0766.png" alt="Akbarshoh" /></div>
+          <div class="gcard__info">
+            <h3>Akbarshoh</h3>
+            <p>Tezkor va yaxshi o'quvchilaridan biri</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/IMG_20260926_092739.jpg" alt="Abduhamidhon" /></div>
+          <div class="gcard__info">
+            <h3>Niozbek</h3>
+            <p>Har doim Roblox o'ynaydigan o'quvchi</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/image copy 7.png" alt="Salohiddin" /></div>
+          <div class="gcard__info">
+            <h3>Salohiddin</h3>
+            <p>Vazifani jimgina bajaradigan o'quvchi</p>
+          </div>
+        </article>
+ 
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/image copy 9.png" alt="Davletbek" /></div>
+          <div class="gcard__info">
+            <h3>Davletbek</h3>
+            <p>Aqlli o'quvchi</p>
+          </div>
+        </article>
+ 
+        <!-- 8-KARTA: yangisini qo'shish uchun shu blokni nusxalab, rasm va matnni o'zgartiring.
+             Boshqa hech narsaga tegish shart emas. -->
+        <article class="gcard">
+          <div class="gcard__img"><img src="./imagis/image copy 8.png" alt="Ism" /></div>
+          <div class="gcard__info">
+            <h3>Alinur</h3>
+            <p>Odobli o'quvchi</p>
+          </div>
+        </article>
+ 
+      </div>
+ 
+      <div class="gslider__controls">
+        <button type="button" class="gslider__arrow" id="gPrev" aria-label="Oldingi">←</button>
+        <div class="gslider__dots" id="gDots"></div>
+        <button type="button" class="gslider__arrow" id="gNext" aria-label="Keyingi">→</button>
+      </div>
+    </div>
+  </div>
+</section>
+ 
+ 
+<!-- ===================== 2) CSS ===================== -->
+<style>
+.gslider {
+  --card-w: 260px;
+  --step: 170px;          /* kartalar orasidagi masofa */
+  position: relative;
+  padding: 20px 0 10px;
+  outline: none;
+}
+ 
+.gslider__track {
+  position: relative;
+  height: 400px;
+  perspective: 1200px;
+  overflow: hidden;       /* kartalar ekrandan chiqib ketmasligi uchun */
+  touch-action: pan-y;
+}
+ 
+.gcard {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: var(--card-w);
+  margin-left: calc(var(--card-w) / -2);
+  border-radius: 20px;
+  background: #3f00fc;
+  box-shadow: 0 12px 30px rgba(58, 11, 11, 0.18);
+  overflow: hidden;
+  cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  user-select: none;
+}
+ 
+.gcard.is-visible { opacity: 1; pointer-events: auto; }
+.gcard.is-active  { cursor: default; }
+ 
+.gcard__img {
+  width: 100%;
+  height: 290px;
+  background: #fff7f7;
+}
+ 
+.gcard__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  pointer-events: none;
+}
+ 
+.gcard__info {
+  padding: 12px 16px 16px;
+  text-align: center;
+}
+ 
+.gcard__info h3 {
+  margin: 0 0 4px;
+  font-size: 18px;
+}
+ 
+.gcard__info p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.4;
+  opacity: 0.75;
+}
+ 
+.gslider__controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 18px;
+}
+ 
+.gslider__arrow {
+  width: 44px;
+  height: 44px;
+  border: none;
+  border-radius: 50%;
+  background: #111;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.gslider__arrow:hover { transform: scale(1.1); }
+ 
+.gslider__dots {
+  display: flex;
+  flex-wrap: wrap;        /* nuqtalar ko'payganda ham qatorga sig'adi */
+  justify-content: center;
+  gap: 8px;
+  max-width: 260px;
+}
+ 
+.gslider__dots button {
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  border: none;
+  border-radius: 50%;
+  background: #bbb;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s;
+}
+.gslider__dots button.active {
+  background: #111;
+  transform: scale(1.4);
+}
+ 
+@media (max-width: 600px) {
+  .gslider { --card-w: 220px; --step: 120px; }
+  .gslider__track { height: 350px; }
+  .gcard__img { height: 240px; }
+}
+</style>
+ 
+ 
+<!-- ===================== 3) JavaScript ===================== -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const root = document.getElementById("gSlider");
+    if (!root) return;
+ 
+    const cards = Array.from(root.querySelectorAll(".gcard"));
+    const dotsBox = document.getElementById("gDots");
+    const prevBtn = document.getElementById("gPrev");
+    const nextBtn = document.getElementById("gNext");
+    const total = cards.length;
+    if (!total) return;
+ 
+    let current = 0;
+ 
+    // nuqtalarni kartalar soniga qarab avtomatik yasaymiz
+    const dots = cards.map(function (_, i) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.setAttribute("aria-label", i + 1 + "-karta");
+      b.addEventListener("click", function () { go(i); });
+      dotsBox.appendChild(b);
+      return b;
+    });
+ 
+    function render() {
+      cards.forEach(function (card, i) {
+        // eng qisqa aylana bo'ylab masofa (oxirgidan birinchiga ham silliq o'tadi)
+        let offset = i - current;
+        if (offset > total / 2) offset -= total;
+        if (offset < -total / 2) offset += total;
+ 
+        const abs = Math.abs(offset);
+        const visible = abs <= 2;
+ 
+        card.classList.toggle("is-visible", visible);
+        card.classList.toggle("is-active", offset === 0);
+ 
+        card.style.zIndex = String(10 - abs);
+        card.style.transform =
+          "translateX(calc(" + offset + " * var(--step))) " +
+          "scale(" + (1 - abs * 0.14) + ") " +
+          "rotateY(" + (offset * -12) + "deg)";
+        card.style.filter = abs === 0 ? "none" : "brightness(0.8)";
+      });
+ 
+      dots.forEach(function (d, i) {
+        d.classList.toggle("active", i === current);
+      });
+    }
+ 
+    function go(i) {
+      current = (i + total) % total;
+      render();
+    }
+ 
+    prevBtn.addEventListener("click", function () { go(current - 1); });
+    nextBtn.addEventListener("click", function () { go(current + 1); });
+ 
+    // kartaning o'ziga bosilsa ham o'sha kartaga o'tadi
+    cards.forEach(function (card, i) {
+      card.addEventListener("click", function () { go(i); });
+    });
+ 
+    // klaviatura
+    root.tabIndex = 0;
+    root.addEventListener("keydown", function (e) {
+      if (e.key === "ArrowLeft") go(current - 1);
+      if (e.key === "ArrowRight") go(current + 1);
+    });
+ 
+    // telefonda surish (swipe)
+    let startX = 0;
+    root.addEventListener("touchstart", function (e) {
+      startX = e.touches[0].clientX;
+    }, { passive: true });
+    root.addEventListener("touchend", function (e) {
+      const diff = e.changedTouches[0].clientX - startX;
+      if (Math.abs(diff) > 50) go(diff < 0 ? current + 1 : current - 1);
+    }, { passive: true });
+ 
+    render();
+  });
+</script>
+ 
+
+      <section class="projects" id="projects">
+        <div class="container">
+          <h2 class="section-title section-title--light">
+            <span class="section-num">04</span> Mening loyihalarim
+          </h2>
+          <p class="section-sub section-sub--light">
+            O'rganish davomida yasagan ishlarim.
+          </p>
+
+          <div class="proj-grid">
+            <a
+              class="proj-card"
+              href="https://ezoz1.netlify.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="proj-card__img">
+                <img data-aos="flip-left" src="./imagis/Плитка.png" alt="Rent Car" />
+              </div>
+              <div class="proj-card__body">
+                <span class="proj-tag">01</span>
+                <h3>TileBuild</h3>
+                <p>uy sotib olish uchun sayt</p>
+              </div>
+            </a>
+
+            <a
+              class="proj-card"
+              href="https://ezoz2.netlify.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="proj-card__img">
+                <img data-aos="flip-left" src="./imagis/Landing Page.png" alt="Gradients" />
+              </div>
+              <div class="proj-card__body">
+                <span class="proj-tag">02</span>
+                <h3>Plantify Carden</h3>
+                <p>gullar zakaz qilish uchun sayt</p>
+              </div>
+            </a>
+
+            <a
+              class="proj-card"
+              href="https://meniyu.vercel.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="proj-card__img">
+                <img data-aos="flip-left" src="./imagis/Homepage.jpg" alt="Cleaning Home" />
+              </div>
+              <div class="proj-card__body">
+                <span class="proj-tag">03</span>
+                <h3>HiMod</h3>
+                <p>mashina tuzatish yoki zabchas sotib olish sayti</p>
+              </div>
+            </a>
+
+            <a
+              class="proj-card"
+              href="https://ezoz0.netlify.app/"
+              target="_blank"
+              rel="noopener"
+            >
+              <div class="proj-card__img">
+                <img data-aos="flip-left"
+                  src="./imagis/Desktop Header Light - 7.png"
+                  alt="Transforms"
+                />
+              </div>
+              <div class="proj-card__body">
+                <span class="proj-tag">04</span>
+                <h3>Bella Olanje</h3>
+                <p>ovqat zakas qilish uchun sayt</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <footer class="contact" id="contact">
+        <div class="container">
+          <h2 class="contact__title">
+            Men, <span>bilan</span><br />
+            bog'laning
+          </h2>
+
+          <div class="contact__grid">
+            <div class="contact__links">
+              <a href="#top">Bosh sahifa</a>
+              <a href="#about">Men haqimda</a>
+              <a href="#family">Oilam</a>
+              <a href="#group">Guruhim</a>
+              <a href="#projects">Loyihalarim</a>
+            </div>
+
+            <div class="contact__info">
+              <a class="contact__big" href="tel:+998915003123"
+                >+998 90 811 05 93</a
+              >
+              <a class="contact__big" href="mailto:meliboyevabirbek6@gmail.com"
+                >ezozbek1021@gmail.com</a
+              >
+
+              <ul class="social">
+                <li>
+                  <a href="#" aria-label="Facebook">
+                    <svg
+                      viewBox="0 0 320 512"
+                      height="1.1em"
+                      fill="currentColor"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Twitter">
+                    <svg
+                      height="1.1em"
+                      fill="currentColor"
+                      viewBox="0 0 48 48"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M42,12.429c-1.323,0.586-2.746,0.977-4.247,1.162c1.526-0.906,2.7-2.351,3.251-4.058c-1.428,0.837-3.01,1.452-4.693,1.776C34.967,9.884,33.05,9,30.926,9c-4.08,0-7.387,3.278-7.387,7.32c0,0.572,0.067,1.129,0.193,1.67c-6.138-0.308-11.582-3.226-15.224-7.654c-0.64,1.082-1,2.349-1,3.686c0,2.541,1.301,4.778,3.285,6.096c-1.211-0.037-2.351-0.374-3.349-0.914c0,0.022,0,0.055,0,0.086c0,3.551,2.547,6.508,5.923,7.181c-0.617,0.169-1.269,0.263-1.941,0.263c-0.477,0-0.942-0.054-1.392-0.135c0.94,2.902,3.667,5.023,6.898,5.086c-2.528,1.96-5.712,3.134-9.174,3.134c-0.598,0-1.183-0.034-1.761-0.104C9.268,36.786,13.152,38,17.321,38c13.585,0,21.017-11.156,21.017-20.834c0-0.317-0.01-0.633-0.025-0.945C39.763,15.197,41.013,13.905,42,12.429"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+                <li>
+                  <a href="#" aria-label="Instagram">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="1.1em"
+                      fill="currentColor"
+                      viewBox="0 0 16 16"
+                    >
+                      <path
+                        d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"
+                      ></path>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="contact__bottom">
+            <span>&copy; 2026 Ezozbek. Barcha huquqlar himoyalangan.</span>
+            <span>Tashkent, O'zbekiston</span>
+          </div>
+        </div>
+      </footer>
+    </main>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll("#familySlider .family-slide");
+        const dots = document.querySelectorAll("#familyDots button");
+        const prev = document.getElementById("familyPrev");
+        const next = document.getElementById("familyNext");
+
+        if (!slides.length) return;
+
+        let current = 0;
+
+        function showFamilySlide(index) {
+          current = (index + slides.length) % slides.length;
+
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === current);
+          });
+
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === current);
+          });
+        }
+
+        prev.addEventListener("click", function () {
+          showFamilySlide(current - 1);
+        });
+
+        next.addEventListener("click", function () {
+          showFamilySlide(current + 1);
+        });
+
+        dots.forEach(function (dot) {
+          dot.addEventListener("click", function () {
+            showFamilySlide(Number(dot.dataset.familySlide));
+          });
+        });
+
+        let startX = 0;
+
+        const slider = document.getElementById("familySlider");
+
+        slider.addEventListener(
+          "touchstart",
+          function (e) {
+            startX = e.touches[0].clientX;
+          },
+          { passive: true },
+        );
+
+        slider.addEventListener(
+          "touchend",
+          function (e) {
+            const endX = e.changedTouches[0].clientX;
+            const diff = endX - startX;
+
+            if (Math.abs(diff) > 50) {
+              showFamilySlide(diff < 0 ? current + 1 : current - 1);
+            }
+          },
+          { passive: true },
+        );
+
+        showFamilySlide(0);
+      });
+    </script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    
+  </body>
+</html>
