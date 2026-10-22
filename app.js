@@ -1,105 +1,145 @@
-const slider = document.getElementById("familySlider");
-const nextBtn = document.querySelector(".carousel-btn.next");
-const prevBtn = document.querySelector(".carousel-btn.prev");
+document.addEventListener("DOMContentLoaded", function () {
+          const root = document.getElementById("gSlider");
+          if (!root) return;
+      
+          const cards = Array.from(root.querySelectorAll(".gcard"));
+          const dotsBox = document.getElementById("gDots");
+          const prevBtn = document.getElementById("gPrev");
+          const nextBtn = document.getElementById("gNext");
+          const total = cards.length;
+          if (!total) return;
+      
+          let current = 0;
+      
+          // nuqtalarni kartalar soniga qarab avtomatik yasaymiz
+          const dots = cards.map(function (_, i) {
+            const b = document.createElement("button");
+            b.type = "button";
+            b.setAttribute("aria-label", i + 1 + "-karta");
+            b.addEventListener("click", function () { go(i); });
+            dotsBox.appendChild(b);
+            return b;
+          });
+      
+          function render() {
+            cards.forEach(function (card, i) {
+              // eng qisqa aylana bo'ylab masofa (oxirgidan birinchiga ham silliq o'tadi)
+              let offset = i - current;
+              if (offset > total / 2) offset -= total;
+              if (offset < -total / 2) offset += total;
+      
+              const abs = Math.abs(offset);
+              const visible = abs <= 2;
+      
+              card.classList.toggle("is-visible", visible);
+              card.classList.toggle("is-active", offset === 0);
+      
+              card.style.zIndex = String(10 - abs);
+              card.style.transform =
+                "translateX(calc(" + offset + " * var(--step))) " +
+                "scale(" + (1 - abs * 0.14) + ") " +
+                "rotateY(" + (offset * -12) + "deg)";
+              card.style.filter = abs === 0 ? "none" : "brightness(0.8)";
+            });
+      
+            dots.forEach(function (d, i) {
+              d.classList.toggle("active", i === current);
+            });
+          }
+      
+          function go(i) {
+            current = (i + total) % total;
+            render();
+          }
+      
+          prevBtn.addEventListener("click", function () { go(current - 1); });
+          nextBtn.addEventListener("click", function () { go(current + 1); });
+      
+          // kartaning o'ziga bosilsa ham o'sha kartaga o'tadi
+          cards.forEach(function (card, i) {
+            card.addEventListener("click", function () { go(i); });
+          });
+      
+          // klaviatura
+          root.tabIndex = 0;
+          root.addEventListener("keydown", function (e) {
+            if (e.key === "ArrowLeft") go(current - 1);
+            if (e.key === "ArrowRight") go(current + 1);
+          });
+      
+          // telefonda surish (swipe)
+          let startX = 0;
+          root.addEventListener("touchstart", function (e) {
+            startX = e.touches[0].clientX;
+          }, { passive: true });
+          root.addEventListener("touchend", function (e) {
+            const diff = e.changedTouches[0].clientX - startX;
+            if (Math.abs(diff) > 50) go(diff < 0 ? current + 1 : current - 1);
+          }, { passive: true });
+      
+          render();
+        });
 
-nextBtn.addEventListener("click", () => {
-  slider.scrollBy({
-    left: slider.clientWidth,
-    behavior: "smooth",
-  });
-});
+        document.addEventListener("DOMContentLoaded", function () {
+        const slides = document.querySelectorAll("#familySlider .family-slide");
+        const dots = document.querySelectorAll("#familyDots button");
+        const prev = document.getElementById("familyPrev");
+        const next = document.getElementById("familyNext");
 
-prevBtn.addEventListener("click", () => {
-  slider.scrollBy({
-    left: -slider.clientWidth,
-    behavior: "smooth",
-  });
-});
-const groupSlider = document.getElementById("groupSlider");
-const groupPrev = document.querySelector(".group-prev");
-const groupNext = document.querySelector(".group-next");
-const groupDots = document.getElementById("groupDots");
+        if (!slides.length) return;
 
-const groupCards = document.querySelectorAll(".group-card");
+        let current = 0;
 
-let currentGroupSlide = 0;
+        function showFamilySlide(index) {
+          current = (index + slides.length) % slides.length;
 
-// Create dots
-groupCards.forEach((_, index) => {
-  const dot = document.createElement("button");
+          slides.forEach((slide, i) => {
+            slide.classList.toggle("active", i === current);
+          });
 
-  dot.classList.add("group-dot");
+          dots.forEach((dot, i) => {
+            dot.classList.toggle("active", i === current);
+          });
+        }
 
-  if (index === 0) {
-    dot.classList.add("active");
-  }
+        prev.addEventListener("click", function () {
+          showFamilySlide(current - 1);
+        });
 
-  dot.setAttribute("aria-label", `Slide ${index + 1}`);
+        next.addEventListener("click", function () {
+          showFamilySlide(current + 1);
+        });
 
-  dot.addEventListener("click", () => {
-    currentGroupSlide = index;
-    scrollToGroupSlide();
-  });
+        dots.forEach(function (dot) {
+          dot.addEventListener("click", function () {
+            showFamilySlide(Number(dot.dataset.familySlide));
+          });
+        });
 
-  groupDots.appendChild(dot);
-});
+        let startX = 0;
 
-const groupDotElements = document.querySelectorAll(".group-dot");
+        const slider = document.getElementById("familySlider");
 
-function scrollToGroupSlide() {
-  const card = groupCards[currentGroupSlide];
+        slider.addEventListener(
+          "touchstart",
+          function (e) {
+            startX = e.touches[0].clientX;
+          },
+          { passive: true },
+        );
 
-  if (!card) return;
+        slider.addEventListener(
+          "touchend",
+          function (e) {
+            const endX = e.changedTouches[0].clientX;
+            const diff = endX - startX;
 
-  groupSlider.scrollTo({
-    left: card.offsetLeft - groupSlider.offsetLeft,
-    behavior: "smooth",
-  });
+            if (Math.abs(diff) > 50) {
+              showFamilySlide(diff < 0 ? current + 1 : current - 1);
+            }
+          },
+          { passive: true },
+        );
 
-  groupDotElements.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentGroupSlide);
-  });
-}
-
-// NEXT
-groupNext.addEventListener("click", () => {
-  currentGroupSlide++;
-
-  if (currentGroupSlide >= groupCards.length) {
-    currentGroupSlide = 0;
-  }
-
-  scrollToGroupSlide();
-});
-
-// PREVIOUS
-groupPrev.addEventListener("click", () => {
-  currentGroupSlide--;
-
-  if (currentGroupSlide < 0) {
-    currentGroupSlide = groupCards.length - 1;
-  }
-
-  scrollToGroupSlide();
-});
-
-// Update dots when user swipes / scrolls
-groupSlider.addEventListener("scroll", () => {
-  let closestIndex = 0;
-  let closestDistance = Infinity;
-
-  groupCards.forEach((card, index) => {
-    const distance = Math.abs(card.offsetLeft - groupSlider.scrollLeft);
-
-    if (distance < closestDistance) {
-      closestDistance = distance;
-      closestIndex = index;
-    }
-  });
-
-  currentGroupSlide = closestIndex;
-
-  groupDotElements.forEach((dot, index) => {
-    dot.classList.toggle("active", index === currentGroupSlide);
-  });
-});
+        showFamilySlide(0);
+      });
